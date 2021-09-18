@@ -37,9 +37,14 @@ header {
         text-decoration: none;
         border-right: 3px solid gray;
         font-weight: 500; }
+      header .top-wrapper nav a:nth-child(3) {
+        border: none; }
     header .top-wrapper .logo img {
       height: 150px;
-      width: 240px; }
+      width: auto; }
+      @media (max-width: 700px) {
+        header .top-wrapper .logo img {
+          height: 80px; } }
   header section {
     display: flex;
     justify-content: center;

@@ -39,11 +39,17 @@ header{
                 border-right:3px solid gray;
                 font-weight: 500;
             }
+            a:nth-child(3){
+                border:none;
+            }
         }
         .logo{
             img{
                 height: 150px;
-                width: 240px;
+                width: auto;
+                @media (max-width: 700px){
+                    height: 80px;
+                }
             }
         }
     }
