@@ -1,0 +1,202 @@
+// Write your styles here
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-wrapper{
+    width: 100%;
+}
+// header
+header{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../img/header_background_v1.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: white;
+    font-family: Roboto, Ubuntu, Cantarell, Helvetica ,sans-serif;
+    .top-wrapper{
+        display: flex;
+        justify-content: space-between;
+        nav{
+            display: flex;
+            align-items: center;
+            height: 60px;
+            width: 60%;
+            justify-content: space-around;
+            a{
+                @include flex-center;
+                height: 100%;
+                width: 100%;
+                color: white;
+                text-decoration: none;
+                border-right:3px solid gray;
+                font-weight: 500;
+            }
+        }
+        .logo{
+            img{
+                height: 150px;
+                width: 240px;
+            }
+        }
+    }
+    section{
+        @include flex-center;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        h1{
+            margin: 10px;
+            text-align: center;
+        }
+        a{
+            @include flex-center;
+            text-decoration: none;
+            color:white;
+            height: 40px;
+            width: 200px;
+            background-color: $main-color;
+        }
+    }
+}
+// main
+main{
+    font-family: $font-1;
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    h1{
+        text-transform: uppercase;
+    }
+    .toolbar{
+        margin: 10px 0;
+        display: flex;
+        align-self: flex-end;
+        input{
+            height: 30px;
+            width: 200px;
+            padding: 5px 10px;
+        }
+    }
+    .post-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        article{
+            margin: 20px 0;
+            display: flex;
+            background-color: #efefef;
+            @media (max-width: 700px){
+                flex-direction: column;
+            }
+            img{
+                margin: 10px;
+            }
+            div{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+            .post{
+                display: flex;
+                flex-direction: column;
+                margin: 10px;
+                align-items: flex-start;
+                .post-description{
+                    margin: 5px 0;
+                    padding-bottom: 5px;
+                    color: $red-color;
+                }
+                h3{
+                    padding-top: 5px;
+                    width: 100%;
+                    border-top: 1px solid gray;
+                    text-transform: uppercase;
+                    color: $h-color;
+                }
+            }
+            button{
+                @include flex-center;
+                @include btn-style;
+                @include text-white-and-uppercase;
+                margin: 20px;
+                background-color: $main-color;
+            }
+        }
+    }
+    }
+}
+// about
+.about{
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div{
+        text-align: right;
+        h1{
+            text-transform: uppercase;
+        }
+        p{
+            margin: 10px 0;
+            text-align: left;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+// contact-form
+.contact-form{
+    width: 100%;
+    text-align: right;
+    h4{
+        text-transform: uppercase;
+    }
+    form{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content:flex-end;
+        text-align: right;
+        label{
+            display: flex;
+            flex-direction: column;
+            height: 50px;
+            width: 49%;
+            position: relative; 
+            margin: 5px 0;
+            color:$main-color;
+            input{
+                height: 100%;
+            }
+        }
+        label[for=form-email]{
+            margin-left: 2%;
+        }
+        label[for=form-question-field]{
+            height: 120px;
+            width: 100%;
+            textarea{
+                height: 100%;
+                padding: 10px;
+            }
+        }
+        input[type=submit]{
+            @include btn-style;
+            @include flex-center;
+        }
+    }
+}

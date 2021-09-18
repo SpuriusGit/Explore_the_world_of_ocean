@@ -1,0 +1,25 @@
+// colors
+$main-color:#01acac;
+$h-color:#0097a7;
+$red-color:#e90303;
+// fonts
+$font-1:Roboto, Ubuntu, Cantarell, Helvetica ,sans-serif;
+$font-2:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+
+// mixins
+@mixin text-white-and-uppercase{
+    color: white;
+    text-transform: uppercase;
+}
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin btn-style{
+    height: 40px;
+    width: 200px;
+    background-color: $main-color;
+    border: none;
+    color: white;
+}
