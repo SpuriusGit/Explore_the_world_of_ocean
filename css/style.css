@@ -71,10 +71,11 @@ header {
       justify-content: center;
       align-items: center;
       text-decoration: none;
-      color: white;
       height: 40px;
       width: 200px;
-      background-color: #01acac; }
+      background-color: #01acac;
+      border: none;
+      color: white; }
 
 main {
   font-family: Roboto, Ubuntu, Cantarell, Helvetica, sans-serif;

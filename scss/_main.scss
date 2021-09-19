@@ -76,10 +76,7 @@ header{
         a{
             @include flex-center;
             text-decoration: none;
-            color:white;
-            height: 40px;
-            width: 200px;
-            background-color: $main-color;
+            @include btn-style;
         }
     }
 }
